@@ -22,6 +22,7 @@
 body {
   background-color: hsla(174, 62%, 47%, 0.04);
   font-family: 'Brown', sans-serif;
+  /* overflow: hidden; */
 }
 
 p.desktop {
@@ -126,7 +127,8 @@ label {
     display: grid;
     padding: 20px;
     grid-template-columns: 40% 60%;
-    gap: 120px;
+    gap: calc(0.3rem + 1vw);
+    place-content: center;
   }
   img {
     margin-block-start: 124px;
@@ -144,7 +146,7 @@ label {
   div.form_container {
     display: grid;
     grid-template-columns: 50% 46%;
-    gap: 24px;
+    gap: calc(1rem + 1vw);
     place-content: center;
   }
   .activity,
