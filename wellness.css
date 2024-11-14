@@ -1,99 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background-color: aliceblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: hsla(174, 62%, 47%, 0.04);
+  font-family: "Simonetta", sans-serif;
 }
+
 p.desktop {
-    display: none;
+  display: none;
 }
 main {
-    margin: 20px;
+  margin: 20px;
 }
 form {
-    background-color: white;
-    padding: 10px;
-    box-shadow: 2px black;
+  background-color: white;
+  max-width: 580px;
+  padding: 40px;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  font-family: "Sofia Sans Condensed", sans-serif;
+  border-radius: 6px;
+  color: rgba(1, 28, 52, 1);
+  font-weight: 500;
 }
 
 div.heading {
-    margin-block: 30px;
-    font-size: 12px;
-    letter-spacing: 0.2px;
+  margin-block: 30px;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  max-width: 460px;
 }
-input[type="text"], input[type="password"], input[type="date"], select, input[type="number"] {
-    width: 100%;
-    height: 30px;
-    margin-block: 10px;
-    border: none;
-    opacity: 0.4;
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+input[type="number"] {
+  width: 100%;
+  height: 48px;
+  margin-block: 24px;
+  border: 1px solid rgba(1, 28, 52, 0.659);
+  opacity: 0.4;
 }
-input[type="password"]:hover, input[type="text"]:hover, input[type="number"]:hover, input[type="date"], select:hover {
-    border: 1px solid rgb(71, 185, 238);
-    cursor: pointer;
+input[type="password"]:hover,
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="date"]:hover,
+select:hover {
+  border: 1px solid rgb(71, 185, 238);
+  cursor: pointer;
+}
+input[type="text"].first {
+  border-color:rgb(71, 185, 238);
 }
 button {
-    background-color: rgb(64, 228, 173);
-    border: none;
-    color: white;
-    font-weight: 900;
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    margin-block: 10px;
-    transition: 1.2s;
-    }
-    button:hover {
-        transform: scale(1.1);
-        background-color: greenyellow;
-    }
+  background: rgba(46, 196, 182, 1);
+  height: 48px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  width: 100%;
+  height: 30px;
+  margin-block: 10px;
+  transition: 1.2s;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: greenyellow;
+}
 img {
-    margin-block: 30px;
-    min-width: 15%;
+  margin-block: 30px;
+  min-width: 15%;
+  /* box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1); */
 }
 img:hover {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 label {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 900;
-    color: rgba(7, 3, 40, 0.816);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 900;
+  color: rgba(7, 3, 40, 0.816);
 }
 .mobile {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 .footer {
-    margin-inline: 10px;
-    font-weight: 600;
-    opacity: 0.75;
-    text-align: center;
-    font-size: 12px;
+  margin-inline: auto;
+  font-weight: 400;
+  opacity: 0.75;
+  text-align: center;
+  font-size: 14px;
+  max-width: 463px;
+  > a {
+    font-weight: 500;
+    color: rgba(46, 196, 182, 1);
+  }
 }
-@media(min-width: 450px) {
-    main {
-        margin: 50px;
-        display: grid;
-        grid-template-columns: 40% 60%;
-}
+@media (min-width: 450px) {
+  main {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  img {
+    margin-block-start: 124px;
+  }
 
-p.desktop {
+  p.desktop {
     display: block;
     margin-block-start: 25px;
     opacity: 0.5;
-}
-p.mobile {
+  }
+  p.mobile {
     display: none;
-    }
-    div.form_container {
-        display: grid;
-        grid-template-columns: 50% 46%;
-        gap: 20px;
-    }
-   .activity, .password, button {
-        grid-column: 1/3;  
-    }
-    
+  }
+  div.form_container {
+    display: grid;
+    grid-template-columns: 50% 46%;
+    gap: 20px;
+    place-content: center;
+  }
+  .activity,
+  .password,
+  button {
+    grid-column: 1/3;
+  }
 }

@@ -12,23 +12,24 @@ body {
 }
 
 h1 {
-    position: absolute;
-    top: -15px;
-    left: 22px;
+    margin-top: -90px;
+    margin-inline: auto;
     padding: 10px;
     background-color: rgb(244, 62, 138);
     border-radius: 5px;
-    width: 316px;
+    width: 80%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size: 1.5;  
 }
 .section {
-    position: relative;
-    top: 60px;
-    left: 60px;
+    margin-block-start: 100px;
+    margin-inline: auto;
     padding: 60px 22px 30px;
     background-color: #fff;
     border-radius: 7px;
-    width: 360px;    
+    width: 70%;   
+    > p {
+        margin-inline: auto;
+    } 
    }
